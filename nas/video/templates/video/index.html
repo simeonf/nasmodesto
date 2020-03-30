@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Class List</h1>
+
+<ul class="list-group">
+{% for klass in klasses %}
+ <li class="list-group-item">
+   <a href="./{{klass.slug }}/">{{ klass }}</a>
+  </li>
+{% endfor %}
+</ul>
+{% endblock %}

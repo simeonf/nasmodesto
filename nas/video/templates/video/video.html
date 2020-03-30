@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page"><a href="../">Videos for {{ klass }}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ video.title }}</li>
+  </ol>
+</nav>
+
+
+<div class="card">
+  <div class="embed-responsive embed-responsive-16by9">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.suffix }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="card-body">
+    <p class="card-text"><em>Posted {{ video.date }}</em> by {{ video.author }}</em></p>
+  </div>
+</div>
+
+{% endblock %}
